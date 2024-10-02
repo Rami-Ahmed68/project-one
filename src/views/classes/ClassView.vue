@@ -18,7 +18,7 @@
 
       <!-- teacher avatar  -->
       <router-link
-        to="/teacher"
+        :to="`/teacher/${this.$store.state.class.teacher._id}`"
         class="teacher"
         v-if="this.$store.state.class.teacher"
       >
