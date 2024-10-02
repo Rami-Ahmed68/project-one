@@ -68,6 +68,11 @@ export default {
     LoadingComponentVue,
   },
   mounted() {
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      this.deferredPrompt = event;
+    });
+
     // to add smooth animation to page
     setTimeout(async () => {
       this.open_cont = "open";
@@ -75,16 +80,9 @@ export default {
   },
   methods: {
     install() {
-      window.addEventListener("beforeinstallprompt", (e) => {
-        e.preventDefault();
-        this.deferredPrompt = e;
-      });
-
       if (this.deferredPrompt) {
         this.deferredPrompt.prompt();
-      } else {
-        // return message in alert if was any error width installation
-        alert("App installation prompt not available");
+        this.deferredPrompt = null;
       }
     },
   },
