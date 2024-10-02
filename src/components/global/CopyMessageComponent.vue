@@ -32,7 +32,7 @@ export default {
   display: flex;
   justify-content: start;
   position: fixed;
-  top: 100px;
+  top: 80px;
   right: -40%;
   z-index: 60;
   box-shadow: 0 0 5px $black;
@@ -58,7 +58,7 @@ export default {
   display: flex;
   justify-content: start;
   position: fixed;
-  top: 100px;
+  top: 80px;
   right: -40%;
   z-index: 60;
   box-shadow: 0 0 5px $black;
