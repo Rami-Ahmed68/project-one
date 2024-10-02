@@ -8,6 +8,7 @@
     <ScrollTopComponentVue />
     <LoadingComponentVue />
     <CopyMessageComponentVue />
+    <AddRateComponent />
 
     <div :class="this.status ? 'cont-open' : 'cont-close'">
       <!-- section one container  -->
@@ -30,6 +31,17 @@
         </div>
 
         <div class="notes">
+          <!-- rate  -->
+          <p>
+            {{
+              this.$store.state.language == "English"
+                ? this.$store.state.English.show_user_page.rate
+                : this.$store.state.Arabic.show_user_page.rate
+            }}
+            {{ this.$store.state.show_user.data.rate }}
+          </p>
+          <!-- rate  -->
+
           <!-- gender  -->
           <p>
             {{
@@ -89,6 +101,25 @@
           }"
         />
         <!--  copy id component   -->
+
+        <!-- add rate button  -->
+
+        <!-- this.$store.state.show_user.rate_stat -->
+        <button
+          v-if="
+            this.$store.state.user &&
+            this.$store.state.show_user.data.rate_status == true &&
+            this.$store.state.user.user_type == 'student'
+          "
+          @click="OpenAddRateForm"
+        >
+          {{
+            this.$store.state.language == "English"
+              ? this.$store.state.English.show_user_page.add_rate
+              : this.$store.state.Arabic.show_user_page.add_rate
+          }}
+        </button>
+        <!-- add rate button  -->
 
         <!--  about me  -->
         <span class="content" v-if="this.$store.state.show_user.data.about_me">
@@ -260,6 +291,7 @@ import CopyMessageComponentVue from "@/components/global/CopyMessageComponent.vu
 import ClassComponentVue from "@/components/class/ClassComponent.vue";
 import PlanInProfilePageCompoeneVue from "@/components/plan/PlanInProfilePageCompoene.vue";
 import ScrollTopComponentVue from "@/components/global/ScrollTopComponent.vue";
+import AddRateComponent from "@/components/global/AddRateComponent.vue";
 import axios from "axios";
 
 export default {
@@ -281,6 +313,7 @@ export default {
     CopyMessageComponentVue,
     ClassComponentVue,
     PlanInProfilePageCompoeneVue,
+    AddRateComponent,
   },
   mounted() {
     setTimeout(() => {
@@ -332,6 +365,16 @@ export default {
     handleScroll() {
       // to start scroll to top component
       this.scroll_page = window.scrollY;
+    },
+
+    // OpenAddRateForm
+    OpenAddRateForm() {
+      // set the teacher id for teacher_id_for_add_rate in store
+      this.$store.state.teacher_id_for_add_rate =
+        this.$store.state.show_user.data._id;
+
+      // to open the form
+      this.$store.commit("OpenOrCloseAddRate");
     },
   },
 };
@@ -479,10 +522,25 @@ export default {
           margin: 3px;
         }
 
+        .editor {
+          color: $font-light;
+        }
+
         .supper_admin {
           @extend .editor;
           background-color: $red;
         }
+      }
+
+      button {
+        width: 98%;
+        height: 40px;
+        margin: 5px 1%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: $green;
+        color: $font-light;
       }
 
       // copy id component style in profile page
@@ -730,10 +788,25 @@ export default {
           margin: 3px;
         }
 
+        .editor {
+          color: $font-light;
+        }
+
         .supper_admin {
           @extend .editor;
           background-color: $red;
         }
+      }
+
+      button {
+        width: 98%;
+        height: 40px;
+        margin: 5px 1%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: $green;
+        color: $font-light;
       }
 
       // copy id component style in profile page

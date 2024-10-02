@@ -71,6 +71,22 @@
           </p>
           <!-- exams  -->
 
+          <!-- rate  -->
+          <p
+            v-if="
+              this.$store.state.user &&
+              this.$store.state.user.user_type == 'teacher'
+            "
+          >
+            {{
+              this.$store.state.language == "English"
+                ? this.$store.state.English.profile.rate
+                : this.$store.state.Arabic.profile.rate
+            }}
+            {{ this.$store.state.profile.rate }}
+          </p>
+          <!-- rate  -->
+
           <!-- gender  -->
           <p>
             {{
@@ -373,13 +389,10 @@ export default {
     }, 100);
 
     // check if the user is loged in
-    if (!this.$store.state.user != "") {
+    if (this.$store.state.user == "") {
       //send the user to log in page
       window.location = "/login";
     }
-
-    // call to get messages count method
-    this.GetMessagesCount();
 
     // check if the user is loged in
     if (this.$store.state.user != "") {
