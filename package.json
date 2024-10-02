@@ -17,7 +17,7 @@
     "register-service-worker": "^1.7.2",
     "swiper": "^11.1.14",
     "vue": "^3.2.13",
-    "vue-awesome-swiper": "^5.0.1",
+    "vue-awesome-swiper": "^8.0.0",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
