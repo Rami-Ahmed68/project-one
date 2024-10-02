@@ -152,7 +152,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../../../sass/varibels/variables";
+@import "../../../../../Sass/varibels/variables";
 // darck  and light English style
 .choose-children-darck-English-open {
   width: 70%;
