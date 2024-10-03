@@ -7,10 +7,16 @@
         @click="this.$store.commit('changeSidBarStatus')"
       />
       <div class="message">
+        <p v-if="this.$store.state.user">
+          {{
+            this.$store.state.language == "English"
+              ? this.$store.state.English.nav_message
+              : this.$store.state.Arabic.nav_message
+          }}
+        </p>
         <h3>
           {{ this.$store.state.user ? this.$store.state.user.user.name : null }}
         </h3>
-        <p>Good Day 👋</p>
       </div>
       <router-link to="/messages">
         <icon icon="bell" />
