@@ -69,7 +69,6 @@ export default {
   },
   mounted() {
     window.addEventListener("beforeinstallprompt", (event) => {
-      this.$store.state.loading = "open";
       event.preventDefault();
       this.deferredPrompt = event;
     });
@@ -83,8 +82,6 @@ export default {
     install() {
       if (this.deferredPrompt) {
         this.deferredPrompt.prompt();
-        this.deferredPrompt = null;
-        this.$store.state.loading = "close";
       }
     },
   },
