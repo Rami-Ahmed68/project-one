@@ -81,9 +81,11 @@ export default {
   methods: {
     install() {
       if (this.deferredPrompt) {
-        let test = prompt("sadsa");
-        console.log(test);
         this.deferredPrompt.prompt();
+
+        if (this.deferredPrompt) {
+          this.deferredPrompt = null
+        }
       }
     },
   },
