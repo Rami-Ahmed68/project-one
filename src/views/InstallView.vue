@@ -82,7 +82,13 @@ export default {
   methods: {
     async install() {
       console.log("start");
+      // to open the loading component
+      this.$store.state.loading = "open";
+
       if (!this.deferredPrompt || this.isInstalling) {
+        // to stop the loading component
+        this.$store.state.loading = "close";
+
         return;
       }
 
@@ -91,9 +97,19 @@ export default {
       try {
         await this.deferredPrompt.prompt();
         this.deferredPrompt = null;
+
+        // to stop the loading component
+        this.$store.state.loading = "close";
       } catch (error) {
         alert(error);
-        console.error("Failed to prompt for install:", error);
+        // to set the reqeust's error message to error message var in store
+        this.$store.state.error_message = error.response.data.message;
+
+        // to open the error form
+        this.$store.state.error_form_status = "open";
+
+        // to stop the loading component
+        this.$store.state.loading = "close";
       } finally {
         this.isInstalling = false;
       }

@@ -61,8 +61,6 @@ export default {
           this.$store.state.messages_count = response.data.Messages_count;
         })
         .catch((error) => {
-          console.log(error);
-
           // to set the reqeust's error message to error message var in store
           this.$store.state.error_message = error.response.data.message;
 
