@@ -60,6 +60,7 @@ export default {
     return {
       deferredPrompt: null,
       open_cont: "close",
+      isInstalling: false,
     };
   },
   components: {
@@ -79,10 +80,20 @@ export default {
     }, 500);
   },
   methods: {
-    install() {
-      if (this.deferredPrompt) {
-        this.deferredPrompt.prompt();
+    async install() {
+      if (!this.deferredPrompt || this.isInstalling) {
+        return;
+      }
+
+      this.isInstalling = true;
+
+      try {
+        await this.deferredPrompt.prompt();
         this.deferredPrompt = null;
+      } catch (error) {
+        console.error("Failed to prompt for install:", error);
+      } finally {
+        this.isInstalling = false;
       }
     },
   },
