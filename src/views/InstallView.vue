@@ -68,10 +68,10 @@ export default {
     LoadingComponentVue,
   },
   mounted() {
-    // window.addEventListener("beforeinstallprompt", (event) => {
-    //   event.preventDefault();
-    //   this.deferredPrompt = event;
-    // });
+    window.addEventListener("beforeinstallprompt", () => {
+      event.preventDefault();
+      this.deferredPrompt = true;
+    });
 
     // to add smooth animation to page
     setTimeout(async () => {
