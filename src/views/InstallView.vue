@@ -68,9 +68,10 @@ export default {
     LoadingComponentVue,
   },
   mounted() {
-    window.addEventListener("beforeinstallprompt", () => {
+    window.addEventListener("beforeinstallprompt", (event) => {
+      this.$store.state.loading = "open";
       event.preventDefault();
-      this.deferredPrompt = true;
+      this.deferredPrompt = event;
     });
 
     // to add smooth animation to page
@@ -83,6 +84,7 @@ export default {
       if (this.deferredPrompt) {
         this.deferredPrompt.prompt();
         this.deferredPrompt = null;
+        this.$store.state.loading = "close";
       }
     },
   },
