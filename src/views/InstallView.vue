@@ -81,6 +81,7 @@ export default {
   },
   methods: {
     async install() {
+      console.log("start");
       if (!this.deferredPrompt || this.isInstalling) {
         return;
       }
@@ -91,6 +92,7 @@ export default {
         await this.deferredPrompt.prompt();
         this.deferredPrompt = null;
       } catch (error) {
+        alert(error);
         console.error("Failed to prompt for install:", error);
       } finally {
         this.isInstalling = false;
