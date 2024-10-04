@@ -74,10 +74,7 @@
         <!-- admin component   -->
 
         <!-- default message  -->
-        <p
-          class="default-message"
-          v-if="this.default_message"
-        >
+        <p class="default-message" v-if="this.default_message">
           {{
             this.$store.state.language == "English"
               ? this.$store.state.English.top_students_page.default
@@ -111,7 +108,7 @@ export default {
       // cards style
       view_style: "list",
       // default_message
-      default_message : false
+      default_message: false,
     };
   },
   components: {
@@ -151,9 +148,9 @@ export default {
 
           // check if the students length is more than 0
           if (response.data.students_data.length > 0) {
-            this.default_message = true
+            this.default_message = false;
           } else {
-            this.default_message = false
+            this.default_message = true;
           }
         })
         .catch((error) => {
