@@ -28,7 +28,7 @@
           this.$store.state.classes.length > 0 ? 'open' : 'close'
         }`"
       >
-        <!-- <div class="boxs-cont">
+        <div class="boxs-cont">
           <swiper class="parallax-slider" parallax grabCursor Navigation>
             <swiper-slide
               v-for="(class_data, index) in this.$store.state.classes"
@@ -40,7 +40,7 @@
               />
             </swiper-slide>
           </swiper>
-        </div> -->
+        </div>
       </div>
 
       <!-- teachers section  -->
@@ -67,7 +67,7 @@
           this.$store.state.teachers.length > 0 ? 'open' : 'close'
         }`"
       >
-        <!-- <div class="boxs-cont">
+        <div class="boxs-cont">
           <swiper class="parallax-slider" parallax grabCursor Navigation>
             <swiper-slide
               v-for="(teacher_data, index) in this.$store.state.teachers"
@@ -79,7 +79,7 @@
               />
             </swiper-slide>
           </swiper>
-        </div> -->
+        </div>
       </div>
 
       <!-- teachers section  -->
@@ -106,7 +106,7 @@
           this.$store.state.admins.length > 0 ? 'open' : 'close'
         }`"
       >
-        <!-- <div class="boxs-cont">
+        <div class="boxs-cont">
           <swiper class="parallax-slider" parallax grabCursor Navigation>
             <swiper-slide
               v-for="(admin_data, index) in this.$store.state.admins"
@@ -118,7 +118,7 @@
               />
             </swiper-slide>
           </swiper>
-        </div> -->
+        </div>
       </div>
 
       <!-- footer component  -->
@@ -132,16 +132,16 @@
 
 <script>
 //? importing the components
-// import { Navigation, Parallax } from "swiper/modules";
-// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import { Navigation, Parallax } from "swiper";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 
 import NavComponentVue from "@/components/global/NavComponent.vue";
 import SidBarComponentVue from "@/components/global/SidBarComponent.vue";
-//import ClassComponentVue from "@/components/class/ClassComponent.vue";
-// import TeacherComponentVue from "@/components/teacher/TeacherComponent.vue";
+import ClassComponentVue from "@/components/class/ClassComponent.vue";
+import TeacherComponentVue from "@/components/teacher/TeacherComponent.vue";
 import LoadingComponentVue from "@/components/global/LoadingComponent.vue";
 import ErrorComponentVue from "@/components/global/ErrorComponent.vue";
-// import AdminComponentVue from "@/components/admin/AdminComponent.vue";
+import AdminComponentVue from "@/components/admin/AdminComponent.vue";
 import ScrollTopComponentVue from "@/components/global/ScrollTopComponent.vue";
 import FooterComponentVue from "@/components/global/FooterComponent.vue";
 import axios from "axios";
@@ -153,7 +153,7 @@ export default {
   data() {
     return {
       // to use and work the swiper libbery
-      // modules: [Navigation, Parallax],
+      modules: [Navigation, Parallax],
       parallaxSwiperWidth: 0,
       scroll_page: 0,
     };
@@ -161,13 +161,13 @@ export default {
   components: {
     SidBarComponentVue,
     NavComponentVue,
-    // ClassComponentVue,
+    ClassComponentVue,
     LoadingComponentVue,
     ErrorComponentVue,
-    // Swiper,
-    // SwiperSlide,
-    // TeacherComponentVue,
-    // AdminComponentVue,
+    Swiper,
+    SwiperSlide,
+    TeacherComponentVue,
+    AdminComponentVue,
     ScrollTopComponentVue,
     FooterComponentVue,
   },
