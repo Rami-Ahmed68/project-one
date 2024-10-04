@@ -294,12 +294,12 @@ If you are my guardian, add P: your email`,
         links: [
           {
             title: "FaceBook",
-            link: "https://www.facebook.com/",
+            link: "https://www.facebook.com/awael.school.alp",
             icon: "facebook",
           },
           {
             title: "WhatsApp",
-            link: "https://wa.me/0952613461",
+            link: "https://wa.me/980 727 092",
             icon: "whatsapp",
           },
           { title: "About Us", link: "/about" },
@@ -1129,12 +1129,12 @@ If you are my guardian, add P: your email`,
         links: [
           {
             title: "فيسبوك",
-            link: "https://www.facebook.com/",
+            link: "https://www.facebook.com/awael.school.alp",
             icon: "facebook",
           },
           {
             title: "واتس اب",
-            link: "https://wa.me/0952613461",
+            link: "https://wa.me/980 727 092",
             icon: "whatsapp",
           },
           { title: "معلومات عنا", link: "/about" },
