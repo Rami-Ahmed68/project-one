@@ -102,9 +102,6 @@ export default {
   methods: {
     // get my plans
     async GetMyPlans() {
-      // to start the loading animation
-      this.$store.state.loading = "open";
-
       // create params
       let params = {};
 
