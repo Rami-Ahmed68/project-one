@@ -36,7 +36,7 @@
       <!-- classes container -->
       <div class="plans-cont">
         <!-- default message  -->
-        <p class="default_message">
+        <p class="default_message" v-if="this.default_message">
           {{
             this.$store.state.language == "English"
               ? this.$store.state.English.my_classes_page.default
@@ -82,6 +82,8 @@ export default {
       api: "",
       // view_style
       view_style: "list",
+      // default_message
+      default_message: false,
     };
   },
   components: {
@@ -146,6 +148,13 @@ export default {
 
           // set the plans data to my_plans array in store
           this.$store.state.my_plans = response.data.plans_data;
+
+          // check if the classes length more than 0
+          if (response.data.plans_data.length > 0) {
+            this.default_message = false;
+          } else {
+            this.default_message = true;
+          }
         })
         .catch((error) => {
           // to stop the loading animation
@@ -237,6 +246,20 @@ export default {
       height: auto;
       margin: 5px 5%;
 
+      // default message
+      .default_message {
+        width: 90%;
+        height: auto;
+        padding: 5px;
+        margin: 5px 5%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $font-light;
+        background-color: $note-darck;
+      }
+
       // results title
       .results {
         width: 100%;
@@ -312,6 +335,20 @@ export default {
       width: 90%;
       height: auto;
       margin: 5px 5%;
+
+      // default message
+      .default_message {
+        width: 90%;
+        height: auto;
+        padding: 5px;
+        margin: 5px 5%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $font-darck;
+        background-color: $note-light;
+      }
 
       // results title
       .results {
@@ -391,6 +428,20 @@ export default {
       height: auto;
       margin: 5px 5%;
 
+      // default message
+      .default_message {
+        width: 90%;
+        height: auto;
+        padding: 5px;
+        margin: 5px 5%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $font-light;
+        background-color: $note-darck;
+      }
+
       // results title
       .results {
         width: 100%;
@@ -466,6 +517,20 @@ export default {
       width: 90%;
       height: auto;
       margin: 5px 5%;
+
+      // default message
+      .default_message {
+        width: 90%;
+        height: auto;
+        padding: 5px;
+        margin: 5px 5%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $font-darck;
+        background-color: $note-light;
+      }
 
       // results title
       .results {

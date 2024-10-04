@@ -34,7 +34,7 @@
       <!-- classes container -->
       <div class="classes-cont">
         <!-- default message  -->
-        <p class="default_message">
+        <p class="default_message" v-if="this.default_message">
           {{
             this.$store.state.language == "English"
               ? this.$store.state.English.my_classes_page.default
@@ -78,6 +78,8 @@ export default {
       status: "close",
       // api
       api: "",
+      // classes length
+      default_message: false,
     };
   },
   components: {
@@ -136,6 +138,13 @@ export default {
 
           // set the plans data to my_classes array in store
           this.$store.state.my_classes = response.data.classes_data;
+
+          // check if the classes length more than 0
+          if (response.data.classes_data.length > 0) {
+            this.default_message = false;
+          } else {
+            this.default_message = true;
+          }
         })
         .catch((error) => {
           // to stop the loading animation
