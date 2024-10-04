@@ -431,6 +431,7 @@ If you are my guardian, add P: your email`,
         phone: "📞 :",
       },
       install_page: {
+        title : "Al'awayil School",
         btn_text: "Click to instll",
         message:
           "Our school: an educational edifice equipped with teaching aids, including equipped classrooms and places for educational and sports activities It was established in 2012 and includes educational stages from kindergarten to middle school.",
@@ -1266,6 +1267,7 @@ If you are my guardian, add P: your email`,
         phone: "📞 :",
       },
       install_page: {
+        title : "مدرسة الأوائل",
         btn_text: "انقر للتحميل",
         message:
           "مدرستنا : صرح تعليمي مجهز بوسائل التعليم من فصول مجهزة و أماكن للأنشطة التعليمية و الرياضية تأسست عام ٢٠١٢ و تتضمن مراحل التعليم من مرحلة رياض الأطفال إلى المرحلة الاعدادية.",
