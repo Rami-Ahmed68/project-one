@@ -17,6 +17,9 @@
               : this.$store.state.Arabic.food_page.page_title
           }}
         </h3>
+
+        <CopyMessageComponent />
+
         <!-- page title  -->
         <p v-if="this.$store.state.food.created_at">
           {{
@@ -51,6 +54,12 @@
         {{ this.$store.state.food.description }}
       </p>
       <!-- description  -->
+
+      <!-- copy id component  -->
+      <CopyIdComponent
+        :Id_data="{ object_type: 'F', id: this.$store.state.food._id }"
+      />
+      <!-- copy id component  -->
 
       <!-- images cont  -->
       <div
@@ -99,6 +108,8 @@
 
 <script>
 //? importing compoenents
+import CopyMessageComponent from "@/components/global/CopyMessageComponent.vue";
+import CopyIdComponent from "@/components/global/CopyIdComponent.vue";
 import SmallNavComponentVue from "@/components/global/nav/SmallNavComponent.vue";
 import SidBarComponentVue from "@/components/global/SidBarComponent.vue";
 import LoadingComponentVue from "@/components/global/LoadingComponent.vue";
@@ -121,6 +132,8 @@ export default {
     ErrorComponentVue,
     ScrollTopComponentVue,
     FooterComponentVue,
+    CopyIdComponent,
+    CopyMessageComponent,
   },
   mounted() {
     setTimeout(() => {
@@ -148,8 +161,6 @@ export default {
 
           // stop the loading animation
           this.$store.state.loading = "close";
-
-          console.log(response);
         })
         .catch((error) => {
           // to stop the loading animation
