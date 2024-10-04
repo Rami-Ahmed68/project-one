@@ -114,13 +114,14 @@ export default {
       };
 
       // select api
-      if (this.$store.state.user.user_type == "teacher") {
-        this.api = this.$store.state.APIs.plans.teacher.get_my_plans;
-        params.teacher_id = this.$store.state.user.user._id;
-      } else if (this.$store.state.user.user_type == "student") {
-        this.api = this.$store.state.APIs.plans.student.get_my_plans;
-        params.student_id = this.$store.state.user.user._id;
-      }
+      this.api = this.$store.state.APIs.plans.teacher.get_my_plans;
+      params.teacher_id = this.$route.params.id;
+
+      // if (this.$store.state.user.user_type == "teacher") {
+      // } else if (this.$store.state.user.user_type == "student") {
+      //   this.api = this.$store.state.APIs.plans.student.get_my_plans;
+      //   params.student_id = this.$store.state.user.user._id;
+      // }
 
       await axios
         .get(
