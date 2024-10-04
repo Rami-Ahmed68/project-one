@@ -190,6 +190,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   background-color: $body-darck;
+  position: relative;
   direction: ltr;
 
   // open style
@@ -308,6 +309,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   background-color: $body-light;
+  position: relative;
   direction: ltr;
 
   // open style
