@@ -6,6 +6,7 @@
     <SidBarComponentVue />
     <LoadingComponentVue />
     <ErrorComponentVue />
+    <CopyMessageComponent />
 
     <div :class="this.$store.state.food ? 'cont-open' : 'cont-close'">
       <div class="page-header">
@@ -17,8 +18,6 @@
               : this.$store.state.Arabic.food_page.page_title
           }}
         </h3>
-
-        <CopyMessageComponent />
 
         <!-- page title  -->
         <p v-if="this.$store.state.food.created_at">
