@@ -227,7 +227,7 @@ export default {
   z-index: 100;
   border-radius: 10px;
   box-shadow: 0 0 10px black;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   overflow-y: scroll;
   padding: 10px 5px 10px 10px;
   direction: ltr;
@@ -297,7 +297,7 @@ export default {
       align-items: center;
       padding: 0px 10px;
       cursor: pointer;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
       border: 1px solid $border-light;
       position: relative;
       a {
@@ -314,7 +314,7 @@ export default {
         position: absolute;
         top: 35%;
         right: 5%;
-        transition-duration: 0.5s;
+        transition-duration: 0.3s;
       }
     }
     .show:hover {
@@ -340,7 +340,7 @@ export default {
     margin: 10px 0px;
     border: 1px solid $border-light;
     overflow: hidden;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 
     // language option
     li {
@@ -354,7 +354,7 @@ export default {
       align-items: center;
       padding: 0px 10px;
       cursor: pointer;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
       border: 1px solid $border-light;
       position: relative;
       color: $font-light;
@@ -383,7 +383,7 @@ export default {
       align-items: center;
 
       svg {
-        transition-duration: 0.5s;
+        transition-duration: 0.3s;
       }
     }
   }
@@ -468,7 +468,7 @@ export default {
     cursor: pointer;
     margin: 20px 10px;
     box-shadow: 0 0 5px $black inset;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     .mood-hand {
       width: 45%;
       height: 80%;
@@ -478,14 +478,14 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
     }
   }
 }
 
 .sidbar-darck-close-English {
   @extend .sidbar-darck-open-English;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   position: absolute;
   left: -60%;
   overflow: hidden;
@@ -581,7 +581,7 @@ export default {
     cursor: pointer;
     margin: 20px 10px;
     box-shadow: 0 0 5px $black inset;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     .mood-hand {
       width: 45%;
       height: 80%;
@@ -591,7 +591,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
     }
   }
 }
@@ -633,7 +633,7 @@ export default {
       align-items: center;
       padding: 0px 10px;
       cursor: pointer;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
       border: 1px solid $border-light;
       position: relative;
       a {
@@ -651,7 +651,7 @@ export default {
         top: 34%;
         right: 86%;
         transform: rotate(180deg);
-        transition-duration: 0.5s;
+        transition-duration: 0.3s;
       }
     }
     .show:hover {
@@ -689,7 +689,7 @@ export default {
     cursor: pointer;
     margin: 20px 10px;
     box-shadow: 0 0 5px $black inset;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     display: flex;
     .mood-hand {
       width: 45%;
@@ -700,14 +700,14 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
     }
   }
 }
 
 .sidbar-darck-close-Arabic {
   @extend .sidbar-darck-open-Arabic;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   position: absolute;
   left: -60%;
   overflow: hidden;
@@ -803,7 +803,7 @@ export default {
     cursor: pointer;
     margin: 20px 10px;
     box-shadow: 0 0 5px $black inset;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     .mood-hand {
       width: 45%;
       height: 80%;
@@ -813,7 +813,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
     }
   }
 }
