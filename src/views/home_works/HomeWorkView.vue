@@ -135,8 +135,8 @@
         <router-link
           :to="
             this.$store.state.home_work.created_by_type == 'admin'
-              ? '/admin'
-              : '/teacher'
+              ? `/admin/${this.$store.state.home_work.created_by._id}`
+              : `/teacher/${this.$store.state.home_work.created_by._id}`
           "
         >
           <img
