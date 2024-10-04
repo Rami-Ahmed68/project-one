@@ -76,7 +76,7 @@
         <!-- default message  -->
         <p
           class="default-message"
-          v-if="this.$store.state.top_students.length == 0"
+          v-if="this.default_message"
         >
           {{
             this.$store.state.language == "English"
@@ -110,6 +110,8 @@ export default {
       class_level: "First_grade",
       // cards style
       view_style: "list",
+      // default_message
+      default_message : false
     };
   },
   components: {
@@ -146,6 +148,13 @@ export default {
 
           // set the top students data from response to top students array in store
           this.$store.state.top_students = response.data.students_data;
+
+          // check if the students length is more than 0
+          if (response.data.students_data.length > 0) {
+            this.default_message = true
+          } else {
+            this.default_message = false
+          }
         })
         .catch((error) => {
           // to stop the loading animation
