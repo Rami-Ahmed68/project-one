@@ -294,12 +294,12 @@ If you are my guardian, add P: your email`,
         links: [
           {
             title: "FaceBook",
-            link: "https://www.facebook.com/albareoun?locale=ar_AR",
+            link: "https://www.facebook.com/",
             icon: "facebook",
           },
           {
             title: "WhatsApp",
-            link: "https://wa.me/0950008822",
+            link: "https://wa.me/0952613461",
             icon: "whatsapp",
           },
           { title: "About Us", link: "/about" },
@@ -1129,12 +1129,12 @@ If you are my guardian, add P: your email`,
         links: [
           {
             title: "فيسبوك",
-            link: "https://www.facebook.com/albareoun?locale=ar_AR",
+            link: "https://www.facebook.com/",
             icon: "facebook",
           },
           {
             title: "واتس اب",
-            link: "https://wa.me/0950008822",
+            link: "https://wa.me/0952613461",
             icon: "whatsapp",
           },
           { title: "معلومات عنا", link: "/about" },
