@@ -431,7 +431,7 @@ If you are my guardian, add P: your email`,
         phone: "📞 :",
       },
       install_page: {
-        title : "Al'awayil School",
+        title : "Al'awayel School",
         btn_text: "Click to instll",
         message:
           "Our school: an educational edifice equipped with teaching aids, including equipped classrooms and places for educational and sports activities It was established in 2012 and includes educational stages from kindergarten to middle school.",
