@@ -240,14 +240,14 @@ export default {
     width: 30px;
     height: 30px;
     color: $font-light;
-    border-radius: 50%;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $body-darck;
     position: absolute;
-    right: 3%;
-    top: 3%;
+    right: 5px;
+    top: 5px;
     cursor: pointer;
   }
 
