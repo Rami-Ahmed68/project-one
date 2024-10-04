@@ -103,7 +103,8 @@
         <!--  copy id component   -->
         <CopyIdComponentVue
           :Id_data="{
-            object_type: 'S',
+            object_type:
+              this.$store.state.show_user.data == 'super' ? 'SA' : 'A',
             id: this.$store.state.show_user.data._id,
           }"
         />

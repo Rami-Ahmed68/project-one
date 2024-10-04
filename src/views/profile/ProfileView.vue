@@ -139,7 +139,21 @@
 
         <!--  copy id component   -->
         <CopyIdComponentVue
-          :Id_data="{ object_type: 'S', id: this.$store.state.profile._id }"
+          :Id_data="{
+            object_type:
+              this.$store.state.user.user_type == 'super'
+                ? 'SA'
+                : this.$store.state.user.user_type == 'admin'
+                ? 'A'
+                : this.$store.state.user.user_type == 'student'
+                ? 'S'
+                : this.$store.state.user.user_type == 'teacher'
+                ? 'T'
+                : this.$store.state.user.user_type == 'parent'
+                ? 'P'
+                : '',
+            id: this.$store.state.profile._id,
+          }"
         />
         <!--  copy id component   -->
 
