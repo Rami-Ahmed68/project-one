@@ -64,7 +64,12 @@
           <!-- joind at  -->
 
           <!-- Phone Number  -->
-          <p v-if="this.$store.state.show_user.data.phone_number">
+          <p
+            v-if="
+              this.$store.state.show_user.data.phone_number &&
+              this.$store.state.user.user_type != 'student'
+            "
+          >
             {{
               this.$store.state.language == "English"
                 ? this.$store.state.English.show_user_page.phone
