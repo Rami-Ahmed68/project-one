@@ -159,6 +159,7 @@ export default {
     AvatarFormComponentVue,
   },
   mounted() {
+    alert(this.$store.state.user.user.phone_number);
     // to open the loading animation
     setTimeout(() => {
       // to start the loading
