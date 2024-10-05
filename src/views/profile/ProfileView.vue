@@ -150,7 +150,7 @@
                 : this.$store.state.user.user_type == 'teacher'
                 ? 'T'
                 : this.$store.state.user.user_type == 'parent'
-                ? 'P'
+                ? 'Pa'
                 : '',
             id: this.$store.state.profile._id,
           }"
