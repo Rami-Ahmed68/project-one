@@ -102,7 +102,7 @@
         <!-- phone input  -->
         <input type="number" v-model="this.phone" />
         <!-- phone input  -->
-        {{ this.phone ? this.phone : "No Phone Number ..." }}
+        {{ JSON.stringify(this.$store.state.user.user) }}
         <!-- update button  -->
         <button
           :class="`${this.$store.state.theme}`"
@@ -159,7 +159,7 @@ export default {
     AvatarFormComponentVue,
   },
   mounted() {
-    alert(this.$store.state.user.user);
+    alert(JSON.stringify(this.$store.state.user.user));
     // to open the loading animation
     setTimeout(() => {
       // to start the loading
