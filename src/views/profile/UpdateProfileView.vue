@@ -100,7 +100,7 @@
         <!-- phone label  -->
 
         <!-- phone input  -->
-        <input type="text" v-model="this.phone" />
+        <input type="number" v-model="this.phone" />
         <!-- phone input  -->
 {{ this.phone }}
         <!-- update button  -->
