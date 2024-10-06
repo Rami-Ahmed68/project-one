@@ -126,6 +126,11 @@ export default {
   direction: ltr;
   padding: 5px;
 
+  @media (max-width: $phone) {
+    width: 80%;
+    left: 10%;
+  }
+
   .header {
     width: 100%;
     height: 40px;
@@ -208,6 +213,11 @@ export default {
   transition-duration: 0.5s;
   direction: ltr;
   padding: 5px;
+
+  @media (max-width: $phone) {
+    width: 80%;
+    left: 10%;
+  }
 
   .header {
     width: 100%;
@@ -294,6 +304,11 @@ export default {
   direction: rtl;
   padding: 5px;
 
+  @media (max-width: $phone) {
+    width: 80%;
+    left: 10%;
+  }
+
   .header {
     width: 100%;
     height: 40px;
@@ -376,6 +391,11 @@ export default {
   transition-duration: 0.5s;
   direction: rtl;
   padding: 5px;
+
+  @media (max-width: $phone) {
+    width: 80%;
+    left: 10%;
+  }
 
   .header {
     width: 100%;
