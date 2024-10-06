@@ -350,7 +350,7 @@ export default {
     opacity: 1;
     position: relative;
     @media (max-width: $phone) {
-      padding: 15% 0px 5% 0px;
+      padding: 16% 0px 5% 0px;
     }
 
     @media (max-width: $phone) {

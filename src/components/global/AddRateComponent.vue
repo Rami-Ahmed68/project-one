@@ -129,6 +129,7 @@ export default {
   @media (max-width: $phone) {
     width: 80%;
     left: 10%;
+    height: 20%;
   }
 
   .header {
@@ -217,6 +218,7 @@ export default {
   @media (max-width: $phone) {
     width: 80%;
     left: 10%;
+    height: 20%;
   }
 
   .header {
@@ -307,6 +309,7 @@ export default {
   @media (max-width: $phone) {
     width: 80%;
     left: 10%;
+    height: 20%;
   }
 
   .header {
@@ -395,6 +398,7 @@ export default {
   @media (max-width: $phone) {
     width: 80%;
     left: 10%;
+    height: 20%;
   }
 
   .header {
