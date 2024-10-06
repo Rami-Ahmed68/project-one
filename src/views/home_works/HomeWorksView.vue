@@ -25,16 +25,6 @@
       <SmallNavComponentVue />
       <!-- small nav scomponent  -->
 
-      <!-- create class shurt cut component  -->
-      <CreateHWShurtCutBtnComponentVue
-        v-if="
-          this.$store.state.user &&
-          this.$store.state.user.user_type != 'student' &&
-          this.$store.state.user.user_type != 'parent'
-        "
-      />
-      <!-- create class shurt cut component  -->
-
       <!-- page title  -->
       <h3 class="page-title">
         {{
@@ -78,7 +68,6 @@ import SearchINputComponentVue from "@/components/homeWorks/SearchINputComponent
 import LoadingComponentVue from "@/components/global/LoadingComponent.vue";
 import ScrollTopComponentVue from "@/components/global/ScrollTopComponent.vue";
 import ErrorComponentVue from "@/components/global/ErrorComponent.vue";
-import CreateHWShurtCutBtnComponentVue from "@/components/global/shurtCutsButtons/CreateHWShurtCutBtnComponent.vue";
 import HWPageHWComponentVue from "@/components/homeWorks/HWPageHWComponent.vue";
 
 export default {
@@ -99,7 +88,6 @@ export default {
     LoadingComponentVue,
     ScrollTopComponentVue,
     ErrorComponentVue,
-    CreateHWShurtCutBtnComponentVue,
     HWPageHWComponentVue,
   },
   mounted() {
