@@ -102,7 +102,7 @@
         <!-- phone input  -->
         <input type="number" v-model="this.phone" />
         <!-- phone input  -->
-        {{ JSON.stringify(this.$store.state.user.user) }}
+
         <!-- update button  -->
         <button
           :class="`${this.$store.state.theme}`"
