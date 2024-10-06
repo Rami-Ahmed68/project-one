@@ -159,7 +159,6 @@ export default {
     AvatarFormComponentVue,
   },
   mounted() {
-    alert(JSON.stringify(this.$store.state.user.user));
     // to open the loading animation
     setTimeout(() => {
       // to start the loading
