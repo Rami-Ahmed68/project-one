@@ -9,6 +9,8 @@ import CreateStudentView from "../views/student/CreateStudentView.vue";
 import StudentCLassesView from "@/views/student/StudentCLassesView.vue";
 import StudentPlansView from "@/views/student/StudentPlansView.vue";
 import TopStudentView from "@/views/student/TopStudentsView.vue";
+import StudentsGPAListView from "@/views/student/StudentsGPAListView.vue";
+import MyGPAListView from "@/views/student/MyGPAListView.vue";
 // students pages
 
 // classes pages
@@ -160,6 +162,16 @@ const routes = [
     path : "/top/students",
     name : "TopStudents",
     component : TopStudentView
+  },
+  {
+    path : "/student/gpa_list/:id",
+    name : "StudentGpa",
+    component : StudentsGPAListView
+  },
+  {
+    path : "/my/gpa_list/:id",
+    name : "MyGpaList",
+    component : MyGPAListView
   },
   // students pages
   // teacher pages

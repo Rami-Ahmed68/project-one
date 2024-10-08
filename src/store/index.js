@@ -457,6 +457,9 @@ If you are my guardian, add P: your email`,
         plans_cont: {
           title: "My Plans",
         },
+        history : {
+          link : "👉 Go To My GPA History"
+        }
       },
       messages_page: {
         page_title: "Messages Page 💬",
@@ -520,6 +523,25 @@ If you are my guardian, add P: your email`,
         plans_cont: {
           title: "Plans",
         },
+        history : {
+          link : "👉 Go To Student's GPA History"
+        }
+      },
+      show_user_gpa_page : {
+        title : "Student GPA Sequence 📌",
+        gpa : "GPA : 📌",
+        points : "Points : 📍",
+        exams : "Exams : 📝📑🔖",
+        date : "Date : 📆",
+        default_message : "📍⛔😕 Sorry, the student has not arrived yet 📍⛔😕"
+      },
+      my_gpa_page : {
+        title : "My GPA Sequence 📌",
+        gpa : "GPA : 📌",
+        points : "Points : 📍",
+        exams : "Exams : 📝📑🔖",
+        date : "Date : 📆",
+        default_message : "📍⛔😕 Sorry you don't have any progress yet 📍⛔😕"
       },
       dash_admins_component: {
         title: "Admins 🦸‍♂️",
@@ -1293,6 +1315,9 @@ If you are my guardian, add P: your email`,
         plans_cont: {
           title: "خططي",
         },
+        history : {
+          link : "👉 اذهب إلى تسلسل معدلي"
+        }
       },
       messages_page: {
         page_title: "صفحة الرسائل 💬",
@@ -1355,6 +1380,25 @@ If you are my guardian, add P: your email`,
         plans_cont: {
           title: "الخطط",
         },
+        history : {
+          link : "👉 اذهب إلى تسلسل معدلي"
+        }
+      },
+      show_user_gpa_page : {
+        title : "تسلسل المعدل التراكمي للطالب 📌",
+        gpa : "المعدل التراكمي : 📌",
+        points : "النقاط : 📍",
+        exasm : "الاختبارات : 📝📑🔖",
+        date : "التارخي : 📆",
+        default_message : "📍⛔😕 عذرا لم يصل الطالب  بعد 📍⛔😕"
+      },
+      my_gpa_page : {
+        title : "تسلسل معدلي التراكمي  📌",
+        gpa : "المعدل التراكمي : 📌",
+        points : "النقاط : 📍",
+        exasm : "الاختبارات : 📝📑🔖",
+        date : "التارخي : 📆",
+        default_message : "📍⛔😕 عذرا ليس لديك أي تقدم بعد 📍⛔😕"
       },
       dash_admins_component: {
         title: "الأدمن 🦸‍♂️",
@@ -2509,7 +2553,7 @@ If you are my guardian, add P: your email`,
     // log out admin
     LogOut() {
       window.localStorage.removeItem("Ss-user");
-      window.location.reload();
+      window.location = '/login';
     },
 
     // get classes

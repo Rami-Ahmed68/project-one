@@ -135,6 +135,23 @@
             {{ this.$store.state.profile.phone_number }}
           </p>
           <!-- Phone Number  -->
+
+          <!-- history link  -->
+          <router-link
+            v-if="
+              this.$store.state.user &&
+              this.$store.state.user.user_type == 'student'
+            "
+            class="history-link"
+            :to="`/my/gpa_list/${this.$store.state.user.user._id}`"
+          >
+            {{
+              this.$store.state.language == "English"
+                ? this.$store.state.English.profile.history.link
+                : this.$store.state.Arabic.profile.history.link
+            }}
+          </router-link>
+          <!-- history link  -->
         </div>
 
         <!--  copy id component   -->
@@ -644,6 +661,18 @@ export default {
           @extend .editor;
           background-color: $red;
         }
+
+        .history-link {
+          width: auto;
+          height: auto;
+          margin: 3px;
+          color: $blue;
+          text-decoration: none;
+          font-size: $x-small;
+          border-radius: 3px;
+          padding: 3px;
+          background-color: $note-darck;
+        }
       }
 
       // copy id component style in profile page
@@ -950,6 +979,18 @@ export default {
           @extend .editor;
           background-color: $red;
         }
+
+        .history-link {
+          width: auto;
+          height: auto;
+          margin: 3px;
+          color: $blue;
+          text-decoration: none;
+          font-size: $x-small;
+          border-radius: 3px;
+          padding: 3px;
+          background-color: $note-light;
+        }
       }
 
       // copy id component style in profile page
@@ -1218,6 +1259,18 @@ export default {
           @extend .editor;
           background-color: $red;
         }
+
+        .history-link {
+          width: auto;
+          height: auto;
+          margin: 3px;
+          color: $blue;
+          text-decoration: none;
+          font-size: $x-small;
+          border-radius: 3px;
+          padding: 3px;
+          background-color: $note-darck;
+        }
       }
 
       // copy id component style in profile page
@@ -1476,6 +1529,18 @@ export default {
         .supper_admin {
           @extend .editor;
           background-color: $red;
+        }
+
+        .history-link {
+          width: auto;
+          height: auto;
+          margin: 3px;
+          color: $blue;
+          text-decoration: none;
+          font-size: $x-small;
+          border-radius: 3px;
+          padding: 3px;
+          background-color: $note-light;
         }
       }
 
