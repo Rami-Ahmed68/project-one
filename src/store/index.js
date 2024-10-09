@@ -164,7 +164,7 @@ export default createStore({
     { English : "Home 🏠" , Arabic : "🏠 الصفحة الرئيسية" , path : "/" , access : ["super" , "admin" , "teacher"]},
     dash_sid_bar_list : [
       { English : "Admins 🦸‍♂️" , Arabic : "المدراء 🦸‍♂️" , component : "admins" , access : ["super" , "admin"]},
-      { English : "Teacher 👨‍🏫" , Arabic : "👨‍🏫 المدرسين" , component : "teachers" , access : ["super" , "admin"]},
+      { English : "Teachers 👨‍🏫" , Arabic : "👨‍🏫 المدرسين" , component : "teachers" , access : ["super" , "admin"]},
       { English : "Students 👨‍🎓" , Arabic : "👨‍🎓 الطلاب" , component : "students", access : ["super" , "admin"]},
       { English : "Parents 👨‍👩‍👦‍👦" , Arabic : "👨‍👩‍👦‍👦  أولياء الأمور", component : "parents" , access : ["super" , "admin"]},
       { English : "Classes 🏫" , Arabic : "🏫 الصفوف" , component : "classes", access : ["super" , "admin" , "teacher"]},
@@ -173,6 +173,8 @@ export default createStore({
       { English : "Plans 📌📚" , Arabic : "📌📚 الخطط" , component : "plans" , access : ["super" , "admin"]},
       { English : "My Classes ⭕📌🏫" , Arabic : "⭕📌🏫 صفوفي " , component : "my-classes" , access : ["teacher"]},
       { English : "Create Admin 🦸‍♂️➕" , Arabic : "🦸‍♂️➕ إنشاء مدير " , component : "create-admin" , access : ["super" , "admin"]},
+      { English : "Create Teacher 👨‍🏫➕" , Arabic : "👨‍🏫➕ إنشاء مدرس " , component : "create-teacher" , access : ["super" , "admin"]},
+      { English : "Create Student 👨‍🎓➕" , Arabic : "👨‍🎓➕ إنشاء طالب " , component : "create-student" , access : ["super" , "admin"]},
       { English : "Create Parent 👨‍👩‍👦‍👦➕" , Arabic : "👨‍👩‍👦‍👦 ➕ إنشاء ولي أمر" , component : "create-parent" , access : ["super" , "admin"]},
       { English : "Create Class 🏫➕" , Arabic : "🏫➕ إنشاء صف" , component : "create-class" , access : ["super" , "admin"]},
       { English : "Create Message 💬➕" , Arabic : "💬➕ إنشاء رسالة" , component : "create-message" , access : ["super" , "admin"]},

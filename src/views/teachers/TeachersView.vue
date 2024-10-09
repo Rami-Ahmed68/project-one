@@ -120,13 +120,37 @@ export default {
           },
         })
         .then((response) => {
-          console.log(response.data);
           // open the page conatiner
           this.status = true;
 
           // to stop the loading animation
           this.$store.state.loading = "close";
 
+          // set the teachers data from response to teachers array in store
+          this.$store.state.teachers = response.data.teachers_data;
+        })
+        .catch((error) => {
+          // to stop the loading animation
+          this.$store.state.loading = "close";
+
+          // to set the reqeust's error message to error message var in store
+          this.$store.state.error_message = error.response.data.message;
+
+          // to open the error form
+          this.$store.state.error_form_status = "open";
+        });
+    },
+
+    // get more teachers method
+    async GetMoreTeachers() {
+      await axios
+        .get(this.$store.state.APIs.teachers.get_all, {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then((response) => {
           // set the teachers data from response to teachers array in store
           this.$store.state.teachers = [
             ...this.$store.state.teachers,
@@ -162,8 +186,8 @@ export default {
         // to change page
         this.page += 1;
 
-        // call the get teachers method to get more teachers
-        this.GetTeachers();
+        // call the get more teachers method to get more teachers
+        this.GetMoreTeachers();
       }
     },
   },

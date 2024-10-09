@@ -122,6 +122,31 @@ export default {
           this.$store.state.loading = "close";
 
           // set the students data from response to students array in store
+          this.$store.state.students = response.data.students_data;
+        })
+        .catch((error) => {
+          // to stop the loading animation
+          this.$store.state.loading = "close";
+
+          // to set the reqeust's error message to error message var in store
+          this.$store.state.error_message = error.response.data.message;
+
+          // to open the error form
+          this.$store.state.error_form_status = "open";
+        });
+    },
+
+    // get more students method
+    async GetMoreStudents() {
+      await axios
+        .get(this.$store.state.APIs.students.get_all, {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then((response) => {
+          // set the students data from response to students array in store
           this.$store.state.students = [
             ...this.$store.state.students,
             ...response.data.students_data,
@@ -157,8 +182,8 @@ export default {
         // to change page
         this.page += 1;
 
-        // call the get students method to get more students
-        this.GetStudents();
+        // call the get more students method to get more students
+        this.GetMoreStudents();
       }
     },
   },

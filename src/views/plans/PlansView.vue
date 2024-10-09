@@ -119,13 +119,37 @@ export default {
           this.status = true;
 
           // set the plans data from response to plans array in store to open the page's cont like smooth
+          this.$store.state.plans = response.data.plans_data;
+
+          // to stope the loading animation
+          this.$store.state.loading = "close";
+        })
+        .catch((error) => {
+          // to stop the loading animation
+          this.$store.state.loading = "close";
+
+          // to set the reqeust's error message to error message var in store
+          this.$store.state.error_message = error.response.data.message;
+
+          // to open the error form
+          this.$store.state.error_form_status = "open";
+        });
+    },
+
+    async GetMorePlans() {
+      await axios
+        .get(this.$store.state.APIs.plans.get_all, {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then((response) => {
+          // set the plans data from response to plans array in store to open the page's cont like smooth
           this.$store.state.plans = [
             ...this.$store.state.plans,
             ...response.data.plans_data,
           ];
-
-          // to stope the loading animation
-          this.$store.state.loading = "close";
         })
         .catch((error) => {
           // to stop the loading animation
@@ -156,8 +180,8 @@ export default {
         // to change the page
         this.page += 1;
 
-        // call to get plans method to get more plans
-        this.GetPlans();
+        // call to get more plans method to get more plans
+        this.GetMorePlans();
       }
     },
   },

@@ -123,6 +123,31 @@ export default {
           this.$store.state.loading = "close";
 
           // set the admins data from response to admins array in store
+          this.$store.state.admins = response.data.admins_data;
+        })
+        .catch((error) => {
+          // to stop the loading animation
+          this.$store.state.loading = "close";
+
+          // to set the reqeust's error message to error message var in store
+          this.$store.state.error_message = error.response.data.message;
+
+          // to open the error form
+          this.$store.state.error_form_status = "open";
+        });
+    },
+
+    // get more admins method
+    async GetMoreAdmins() {
+      await axios
+        .get(this.$store.state.APIs.admins.get_all, {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then((response) => {
+          // set the admins data from response to admins array in store
           this.$store.state.admins = [
             ...this.$store.state.admins,
             ...response.data.admins_data,
@@ -158,8 +183,8 @@ export default {
         // to change page
         this.page += 1;
 
-        // call the get admins method to get more admins
-        this.GetAdmins();
+        // call the get more admins method to get more admins
+        this.GetMoreAdmins();
       }
     },
   },

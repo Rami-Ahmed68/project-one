@@ -426,7 +426,7 @@ import UpdateFoodComponent from "@/components/dash/Foods/UpdateFoodComponent.vue
 import CreateFoodComponent from "@/components/dash/Foods/CreateFoodComponent.vue";
 import TeacherCLassesView from "@/components/dash/Teachers/TeacherCLassesView.vue";
 import MathQuestionsComponent from "@/components/dash/Subjects/Math/MathQuestionsComponent.vue";
-import CreateQuestuinComponent from "@/components/Subjects/CreateQuestuinComponent copy.vue";
+import CreateQuestuinComponent from "@/components/Subjects/CreateQuestuinComponent.vue";
 import AddOptionComponnet from "@/components/global/forms/dash/Subject/AddOptionComponnet.vue";
 import UpdateQuestuinComponent from "@/components/Subjects/UpdateQuestuinComponent.vue";
 import VerifyDeleteQuestionComponent from "@/components/global/forms/dash/Subject/VerifyDeleteQuestionComponent.vue";
@@ -585,13 +585,13 @@ export default {
 
     svg {
       padding: 10px;
-      border-radius: 50%;
+      border-radius: 5px;
       background-color: $message-darck;
       color: $font-light;
       cursor: pointer;
       position: absolute;
       right: -15px;
-      top: 20px;
+      top: 40px;
     }
 
     // home link (svg)
@@ -683,13 +683,13 @@ export default {
 
     svg {
       padding: 10px;
-      border-radius: 50%;
+      border-radius: 5px;
       background-color: $message-light;
       color: $font-darck;
       cursor: pointer;
       position: absolute;
       right: -15px;
-      top: 20px;
+      top: 40px;
     }
 
     // home link (svg)

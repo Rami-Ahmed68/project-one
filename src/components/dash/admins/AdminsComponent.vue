@@ -52,6 +52,12 @@ export default {
     };
   },
   mounted() {
+    // to open the loading smoothy
+    setTimeout(() => {
+      // to start the loading animation
+      this.$store.state.loading = "open";
+    }, 200);
+
     // call to get admins count
     this.GetAdminsCount();
 
@@ -64,9 +70,6 @@ export default {
   methods: {
     // get admins method
     async GetAdmins() {
-      // to start the loading animation
-      this.$store.state.loading = "open";
-
       await axios
         .get(this.$store.state.APIs.admins.get_all, {
           params: {

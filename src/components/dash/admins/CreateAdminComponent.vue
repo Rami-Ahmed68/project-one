@@ -214,7 +214,7 @@ export default {
       // avatar
       avatar: this.gender === "male" ? Female_icon : Male_icon,
       // / form data to add all new admin data in it ande send it in request
-      formData: new FormData(),
+      formData: "",
     };
   },
   components: {},
@@ -236,6 +236,9 @@ export default {
 
     // create admin
     async CreateAdmin() {
+      // to craete a new form data
+      this.formData = new FormData();
+
       // to start the loading animation
       this.$store.state.loading = "open";
 

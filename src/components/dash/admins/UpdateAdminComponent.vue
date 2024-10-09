@@ -181,7 +181,7 @@ export default {
       // default avatar
       avatar: this.$store.state.admin_for_update.avatar,
       // form data
-      formData: new FormData(),
+      formData: "",
     };
   },
   components: {
@@ -195,6 +195,9 @@ export default {
   methods: {
     // update admin method
     async UpdateAdmin() {
+      // to create a new form data
+      this.formData = new FormData();
+
       // to start the loading animation
       this.$store.state.loading = "open";
 

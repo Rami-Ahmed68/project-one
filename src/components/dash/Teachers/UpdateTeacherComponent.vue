@@ -234,7 +234,7 @@ export default {
       // class level
       class_level: this.$store.state.teacher_for_update.class_level,
       // form data
-      formData: new FormData(),
+      formData: "",
     };
   },
   components: {
@@ -248,6 +248,9 @@ export default {
   methods: {
     // update admin method
     async UpdateAdmin() {
+      // to create a new form data
+      this.formData = new FormData();
+
       // to start the loading animation
       this.$store.state.loading = "open";
 

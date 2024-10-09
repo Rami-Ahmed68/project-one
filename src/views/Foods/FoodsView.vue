@@ -112,15 +112,38 @@ export default {
           this.status = true;
 
           // set the foods data from response to food's array in store
+          this.$store.state.foods = response.data.foods_data;
+
+          // stop the loading animation
+          this.$store.state.loading = "close";
+        })
+        .catch((error) => {
+          // to stop the loading animation
+          this.$store.state.loading = "close";
+
+          // to set the reqeust's error message to error message var in store
+          this.$store.state.error_message = error.response.data.message;
+
+          // to open the error form
+          this.$store.state.error_form_status = "open";
+        });
+    },
+
+    // get more foods method
+    async GetMoreFoods() {
+      axios
+        .get(this.$store.state.APIs.food.get_all, {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then((response) => {
+          // set the foods data from response to food's array in store
           this.$store.state.foods = [
             ...this.$store.state.foods,
             ...response.data.foods_data,
           ];
-
-          // stop the loading animation
-          this.$store.state.loading = "close";
-
-          console.log(response);
         })
         .catch((error) => {
           // to stop the loading animation
@@ -152,8 +175,8 @@ export default {
         // to change page
         this.page += 1;
 
-        // call the get foods method to get more foods
-        await this.GetFoods();
+        // call the get more foods method to get more foods
+        await this.GetMoreFoods();
       }
     },
   },

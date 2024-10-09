@@ -115,13 +115,38 @@ export default {
         })
         .then((Response) => {
           // copy the classes from response and add that to classes array in store
+          this.$store.state.classes = Response.data.classes_data;
+
+          // to stope the loading animation
+          this.$store.state.loading = "close";
+        })
+        .catch((error) => {
+          // to stop the loading animation
+          this.$store.state.loading = "close";
+
+          // to set the reqeust's error message to error message var in store
+          this.$store.state.error_message = error.response.data.message;
+
+          // to open the error form
+          this.$store.state.error_form_status = "open";
+        });
+    },
+
+    // get more classes method
+    async GetMoreCLasses() {
+      await axios
+        .get(this.$store.state.APIs.classes.get_all, {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then((Response) => {
+          // copy the classes from response and add that to classes array in store
           this.$store.state.classes = [
             ...this.$store.state.classes,
             ...Response.data.classes_data,
           ];
-
-          // to stope the loading animation
-          this.$store.state.loading = "close";
         })
         .catch((error) => {
           // to stop the loading animation
@@ -145,8 +170,8 @@ export default {
         // to change page
         this.page += 1;
 
-        // call the get classes method to get more classes
-        await this.GetCLasses();
+        // call the get more classes method to get more classes
+        await this.GetMoreCLasses();
       }
 
       // to start scroll to top component
