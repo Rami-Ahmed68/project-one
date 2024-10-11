@@ -107,7 +107,7 @@
       </label>
 
       <input
-        type="text"
+        type="number"
         id="points"
         v-model="this.points"
         :placeholder="
@@ -176,7 +176,14 @@
       <!-- level  -->
 
       <!-- class_level  -->
-      <label for="class_level">
+      <label
+        for="class_level"
+        v-if="
+          (this.$store.state.user &&
+            this.$store.state.user.user_type == 'super') ||
+          this.$store.state.user.user_type == 'admin'
+        "
+      >
         {{
           this.$store.state.language == "English"
             ? this.$store.state.English.create_question.class_level
@@ -184,7 +191,16 @@
         }}
       </label>
 
-      <select name="" id="class_level" v-model="this.class_level">
+      <select
+        name=""
+        id="class_level"
+        v-model="this.class_level"
+        v-if="
+          (this.$store.state.user &&
+            this.$store.state.user.user_type == 'super') ||
+          this.$store.state.user.user_type == 'admin'
+        "
+      >
         <option
           v-for="(class_level, index) in this.$store.state.Classes_level_list"
           :key="index"
@@ -200,7 +216,14 @@
       <!-- class_level  -->
 
       <!-- subject_type  -->
-      <label for="subject_type">
+      <label
+        for="subject_type"
+        v-if="
+          (this.$store.state.user &&
+            this.$store.state.user.user_type == 'super') ||
+          this.$store.state.user.user_type == 'admin'
+        "
+      >
         {{
           this.$store.state.language == "English"
             ? this.$store.state.English.create_question.subject_type
@@ -208,7 +231,16 @@
         }}
       </label>
 
-      <select name="" id="subject_type" v-model="this.subject_type">
+      <select
+        name=""
+        id="subject_type"
+        v-model="this.subject_type"
+        v-if="
+          (this.$store.state.user &&
+            this.$store.state.user.user_type == 'super') ||
+          this.$store.state.user.user_type == 'admin'
+        "
+      >
         <option
           v-for="(subject_type, index) in this.$store.state.subjects_list"
           :key="index"
@@ -298,11 +330,17 @@ export default {
       // level
       level: "easy",
       // class level
-      class_level: "First_grade",
+      class_level:
+        this.$store.state.user && this.$store.state.user.user_type == "teacher"
+          ? this.$store.state.user.user.class_level
+          : "First_grade",
       // options
       options: [],
       // subject type
-      subject_type: "Math",
+      subject_type:
+        this.$store.state.user && this.$store.state.user.user_type == "teacher"
+          ? this.$store.state.user.user.subject
+          : "Math",
       // api
       api: "",
       // images's array

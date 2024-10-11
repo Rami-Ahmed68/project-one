@@ -72,7 +72,13 @@
     <!-- info container  -->
 
     <!-- buttons container  -->
-    <div class="buttons">
+    <div
+      class="buttons"
+      v-if="
+        this.$store.state.user &&
+        this.$store.state.user.user_type == this.subject_type
+      "
+    >
       <!-- update -->
       <button class="update" @click="GoToUpdateQuestion">
         {{

@@ -103,11 +103,19 @@
       <!-- subject  -->
 
       <!-- class level  -->
-      <label for="class_level">{{
-        this.$store.state.language == "English"
-          ? this.$store.state.English.update_class.class_level
-          : this.$store.state.Arabic.update_class.class_level
-      }}</label>
+      <label
+        for="class_level"
+        v-if="
+          (this.$store.state.user &&
+            this.$store.state.user.user_type == 'super') ||
+          this.$store.state.user.user_type == 'admin'
+        "
+        >{{
+          this.$store.state.language == "English"
+            ? this.$store.state.English.update_class.class_level
+            : this.$store.state.Arabic.update_class.class_level
+        }}</label
+      >
 
       <select name="" id="class_level" v-model="this.class_level">
         <option

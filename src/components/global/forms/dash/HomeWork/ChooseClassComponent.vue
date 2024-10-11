@@ -93,7 +93,7 @@ export default {
       await axios
         .get(this.$store.state.APIs.classes.get_one, {
           params: {
-            class_id: this.class_id.split(":")[1],
+            class_id: this.class_id.split("/")[1],
           },
         })
         .then((response) => {

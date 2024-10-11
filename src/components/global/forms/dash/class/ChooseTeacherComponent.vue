@@ -104,7 +104,7 @@ export default {
       await axios
         .get(this.$store.state.APIs.teachers.get_one, {
           params: {
-            teacher_id: this.teacher_id.split(":")[1],
+            teacher_id: this.teacher_id.split("/")[1],
           },
         })
         .then((response) => {

@@ -176,7 +176,7 @@ export default createStore({
       { English : "Create Teacher 👨‍🏫➕" , Arabic : "👨‍🏫➕ إنشاء مدرس " , component : "create-teacher" , access : ["super" , "admin"]},
       { English : "Create Student 👨‍🎓➕" , Arabic : "👨‍🎓➕ إنشاء طالب " , component : "create-student" , access : ["super" , "admin"]},
       { English : "Create Parent 👨‍👩‍👦‍👦➕" , Arabic : "👨‍👩‍👦‍👦 ➕ إنشاء ولي أمر" , component : "create-parent" , access : ["super" , "admin"]},
-      { English : "Create Class 🏫➕" , Arabic : "🏫➕ إنشاء صف" , component : "create-class" , access : ["super" , "admin"]},
+      { English : "Create Class 🏫➕" , Arabic : "🏫➕ إنشاء صف" , component : "create-class" , access : ["super" , "admin" , "teacher"]},
       { English : "Create Message 💬➕" , Arabic : "💬➕ إنشاء رسالة" , component : "create-message" , access : ["super" , "admin"]},
       { English : "Create Home Work 🏚️💯🔝➕" , Arabic : "🏚️💯🔝➕ إنشاء وظيفة" , component : "create-home-work" , access : ["super" , "admin" , "teacher"]},
       { English : "Create Plan 📌📚➕" , Arabic : "📌📚➕ إنشاء خطة" , component : "create-plan" , access : ["super" , "admin"]},
