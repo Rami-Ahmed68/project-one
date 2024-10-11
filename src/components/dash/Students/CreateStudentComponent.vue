@@ -244,7 +244,7 @@ export default {
       // default avatar
       avatar: this.gender === "male" ? Female_icon : Male_icon,
       // class level
-      class_level: this.$store.state.student_for_update.class_level,
+      class_level: "First_grade",
       // form data
       formData: "",
     };

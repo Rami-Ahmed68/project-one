@@ -33,18 +33,6 @@
         :key="index"
         :Plan_data="plan_data"
       />
-
-      <PlanInPlansPageComponentDash
-        v-for="(plan_data, index) in this.$store.state.plans"
-        :key="index"
-        :Plan_data="plan_data"
-      />
-
-      <PlanInPlansPageComponentDash
-        v-for="(plan_data, index) in this.$store.state.plans"
-        :key="index"
-        :Plan_data="plan_data"
-      />
     </div>
     <!-- messages container  -->
   </div>

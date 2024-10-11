@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`plan-page-${this.$store.state.mood}-${this.$store.state.language}`"
+    :class="`plans-page-${this.$store.state.mood}-${this.$store.state.language}`"
   >
     <SmallNavComponentVue />
     <SidBarComponentVue />
@@ -104,7 +104,7 @@
                     ? this.$store.state.English.plan_page.subject
                     : this.$store.state.Arabic.plan_page.subject
                 }}
-                {{ subject.subject_title }}
+                {{ subject.subject }}
               </p>
               |
               <p class="start">
@@ -236,7 +236,7 @@ export default {
 @import "../../Sass/varibels/variables";
 
 // darck and light English style
-.plan-page-darck-English {
+.plans-page-darck-English {
   width: 100%;
   min-height: 100vh;
   background-color: $body-darck;
@@ -407,8 +407,8 @@ export default {
   }
 }
 
-.plan-page-light-English {
-  @extend .plan-page-darck-English;
+.plans-page-light-English {
+  @extend .plans-page-darck-English;
   background-color: $body-light;
 
   .cont-open {
@@ -467,13 +467,13 @@ export default {
 // darck and light English style
 
 // darck and light Arabic style
-.plan-page-darck-Arabic {
-  @extend .plan-page-darck-English;
-  direction: ltr;
+.plans-page-darck-Arabic {
+  @extend .plans-page-darck-English;
+  direction: rtl;
 }
 
-.plan-page-light-Arabic {
-  @extend .plan-page-light-English;
+.plans-page-light-Arabic {
+  @extend .plans-page-light-English;
   direction: rtl;
 }
 // darck and light Arabic style
