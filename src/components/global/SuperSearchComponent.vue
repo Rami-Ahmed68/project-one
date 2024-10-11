@@ -128,6 +128,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0px 5px;
+    direction: ltr;
 
     input {
       width: 80%;
@@ -206,6 +207,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0px 5px;
+    direction: ltr;
 
     input {
       width: 80%;

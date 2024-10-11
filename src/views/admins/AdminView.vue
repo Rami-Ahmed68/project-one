@@ -21,21 +21,6 @@
           />
         </div>
 
-        <router-link
-          v-if="
-            this.$store.state.user.user_type == 'super' ||
-            this.$store.state.user.user._id ==
-              this.$store.state.show_user.data._id
-          "
-          class="update-icon"
-          :to="
-            this.$store.state.user
-              ? `/updateProfile/${this.$store.state.user.user._id}`
-              : ''
-          "
-          >⚙️</router-link
-        >
-
         <div class="info">
           <!-- name  -->
           <h2>
