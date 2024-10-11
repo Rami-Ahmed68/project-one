@@ -76,7 +76,7 @@
       class="buttons"
       v-if="
         this.$store.state.user &&
-        this.$store.state.user.user_type == this.subject_type
+        this.$store.state.user.user.subject == this.subject_type
       "
     >
       <!-- update -->
