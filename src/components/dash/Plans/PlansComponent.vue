@@ -191,7 +191,7 @@ export default {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 5px 0px;
     border: 1px solid;
@@ -225,7 +225,7 @@ export default {
     @media (min-width: $phone) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: start;
       align-items: center;
     }
 
@@ -277,7 +277,7 @@ export default {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 5px 0px;
     border: 1px solid;
@@ -310,7 +310,7 @@ export default {
     @media (min-width: $phone) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: start;
       align-items: center;
     }
 
@@ -365,7 +365,7 @@ export default {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 5px 0px;
     border: 1px solid;
@@ -399,7 +399,7 @@ export default {
     @media (min-width: $phone) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: start;
       align-items: center;
     }
 
@@ -451,7 +451,7 @@ export default {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 5px 0px;
     border: 1px solid;
@@ -485,7 +485,7 @@ export default {
     @media (min-width: $phone) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: start;
       align-items: center;
     }
 

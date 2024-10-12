@@ -15,7 +15,6 @@
         </h3>
         <div class="count">{{ this.students_count }}</div>
       </div>
-      <StartRateTeachersComponentVue />
     </div>
     <!-- admins header  -->
 

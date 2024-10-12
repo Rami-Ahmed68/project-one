@@ -70,6 +70,17 @@
           </p>
           <!-- class level  -->
 
+          <!-- class level  -->
+          <p>
+            {{
+              this.$store.state.language == "English"
+                ? this.$store.state.English.show_user_page.subject
+                : this.$store.state.Arabic.show_user_page.class_level
+            }}
+            {{ this.$store.state.show_user.data.subject }}
+          </p>
+          <!-- class level  -->
+
           <!-- joind at  -->
           <p v-if="this.$store.state.show_user.data.joind_at">
             {{

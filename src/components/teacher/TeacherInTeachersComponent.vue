@@ -44,7 +44,7 @@
     <div
       class="buttons"
       v-if="
-        (this.Dash && !this.$store.state.user.user_type == 'admin') ||
+        (this.Dash && this.$store.state.user.user_type == 'admin') ||
         this.$store.state.user.user_type == 'super'
       "
     >

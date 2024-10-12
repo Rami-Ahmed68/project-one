@@ -81,13 +81,13 @@
 
       <input
         type="text"
+        id="birth_date"
         :placeholder="
           this.$store.state.language == 'English'
             ? this.$store.state.English.update_student.birth_date_placeholder
             : this.$store.state.Arabic.update_student.birth_date_placeholder
         "
         v-model="this.birth_date"
-        id="phone"
       />
       <!-- birth date  -->
 
@@ -102,13 +102,13 @@
 
       <input
         type="text"
+        id="phone"
         :placeholder="
           this.$store.state.language == 'English'
             ? this.$store.state.English.update_student.phone_placeholder
             : this.$store.state.Arabic.update_student.phone_placeholder
         "
         v-model="this.phone_number"
-        id="phone"
       />
       <!-- Phone Number  -->
 

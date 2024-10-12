@@ -114,7 +114,7 @@ export default {
   cursor: pointer;
   direction: ltr;
   @media (min-width: $phone) {
-    margin: 5px 0px;
+    margin: 5px;
     width: 33%;
   }
 
@@ -155,7 +155,7 @@ export default {
     border-radius: 5px;
     color: $font-light;
     background-color: $red;
-    margin: 5px 0px;
+    margin: 5px;
     cursor: pointer;
   }
 
@@ -202,7 +202,7 @@ export default {
   direction: rtl;
 
   @media (min-width: $phone) {
-    margin: 5px 0px;
+    margin: 5px;
     width: 33%;
   }
 
@@ -244,7 +244,7 @@ export default {
     border-radius: 5px;
     color: $font-light;
     background-color: $red;
-    margin: 5px 0px;
+    margin: 5px;
     cursor: pointer;
   }
 

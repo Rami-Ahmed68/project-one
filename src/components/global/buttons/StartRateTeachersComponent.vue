@@ -19,9 +19,7 @@
 import axios from "axios";
 export default {
   name: "start-rate-button",
-  mounted() {
-    console.log(this.$store.state.teachers);
-  },
+  mounted() {},
   methods: {
     // start rate method
     async StartRate() {
@@ -32,8 +30,6 @@ export default {
       const headers = {
         Authorization: `Bearer ${this.$store.state.user.token}`,
       };
-
-      console.log(headers);
 
       // create data
       let data;
@@ -50,8 +46,6 @@ export default {
         };
       }
 
-      console.log(data);
-
       await axios
         .put(
           this.$store.state.user.user_type == "admin"
@@ -60,15 +54,13 @@ export default {
           data,
           { headers }
         )
-        .then((response) => {
+        .then(() => {
           // to stop the loading animation
           this.$store.state.loading = "close";
 
-          console.log(response);
           this.$store.state.rate_status = !this.$store.state.rate_status;
         })
         .catch((error) => {
-          console.log(error);
           // to stop the loading animation
           this.$store.state.loading = "close";
 
