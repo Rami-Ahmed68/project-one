@@ -70,6 +70,7 @@
         </div>
         <!-- line  -->
       </div>
+      <!-- section -->
 
       <!-- default message  -->
       <div
@@ -238,25 +239,25 @@ export default {
           font-size: $x-small;
         }
       }
+    }
 
-      .default_message {
-        width: 90%;
-        height: auto;
-        padding: 5px;
-        border-radius: 5px;
-        margin: 5px 5%;
-        font-size: $small;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .default_message {
+      width: 90%;
+      height: auto;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 5px 5%;
+      font-size: $small;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        @media (max-width: $phone) {
-          font-size: $x-small;
-        }
-
-        background-color: $note-darck;
-        color: $font-light;
+      @media (max-width: $phone) {
+        font-size: $x-small;
       }
+
+      background-color: $note-darck;
+      color: $font-light;
     }
   }
 
@@ -329,25 +330,25 @@ export default {
           font-size: $x-small;
         }
       }
+    }
 
-      .default_message {
-        width: 90%;
-        height: auto;
-        padding: 5px;
-        border-radius: 5px;
-        margin: 5px 5%;
-        font-size: $small;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .default_message {
+      width: 90%;
+      height: auto;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 5px 5%;
+      font-size: $small;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        @media (max-width: $phone) {
-          font-size: $x-small;
-        }
-
-        background-color: $note-light;
-        color: $font-darck;
+      @media (max-width: $phone) {
+        font-size: $x-small;
       }
+
+      background-color: $note-light;
+      color: $font-darck;
     }
   }
 
@@ -422,25 +423,25 @@ export default {
           font-size: $x-small;
         }
       }
+    }
 
-      .default_message {
-        width: 90%;
-        height: auto;
-        padding: 5px;
-        border-radius: 5px;
-        margin: 5px 5%;
-        font-size: $small;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .default_message {
+      width: 90%;
+      height: auto;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 5px 5%;
+      font-size: $small;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        @media (max-width: $phone) {
-          font-size: $x-small;
-        }
-
-        background-color: $note-darck;
-        color: $font-light;
+      @media (max-width: $phone) {
+        font-size: $x-small;
       }
+
+      background-color: $note-darck;
+      color: $font-light;
     }
   }
 
@@ -513,25 +514,25 @@ export default {
           font-size: $x-small;
         }
       }
+    }
 
-      .default_message {
-        width: 90%;
-        height: auto;
-        padding: 5px;
-        border-radius: 5px;
-        margin: 5px 5%;
-        font-size: $small;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .default_message {
+      width: 90%;
+      height: auto;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 5px 5%;
+      font-size: $small;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        @media (max-width: $phone) {
-          font-size: $x-small;
-        }
-
-        background-color: $note-light;
-        color: $font-darck;
+      @media (max-width: $phone) {
+        font-size: $x-small;
       }
+
+      background-color: $note-light;
+      color: $font-darck;
     }
   }
 

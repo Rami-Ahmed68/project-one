@@ -65,37 +65,51 @@ export default {
         };
       }
 
-      await axios
-        .delete(
-          this.$store.state.user.user_type == "super"
-            ? this.$store.state.APIs.food.super.delete
-            : this.$store.state.APIs.food.admin.delete,
-          { data, headers }
-        )
-        .then(() => {
-          // to stop the loading animation
-          this.$store.state.loading = "close";
+      try {
+        await axios
+          .delete(
+            this.$store.state.user.user_type == "super"
+              ? this.$store.state.APIs.food.super.delete
+              : this.$store.state.APIs.food.admin.delete,
+            { data, headers }
+          )
+          .then(() => {
+            // to stop the loading animation
+            this.$store.state.loading = "close";
 
-          // close the verify delete parent form
-          this.$store.commit("OpenOrCloseDeleteFoodForm");
+            // close the verify delete parent form
+            this.$store.commit("OpenOrCloseDeleteFoodForm");
 
-          // update the active component in dash
-          // this.$store.state.activeactive_component_in_dash = "foods";
-          window.location.reload();
-        })
-        .catch((error) => {
-          // to stop the loading animation
-          this.$store.state.loading = "close";
+            // update the active component in dash
+            // this.$store.state.activeactive_component_in_dash = "foods";
+            window.location.reload();
+          })
+          .catch((error) => {
+            // to stop the loading animation
+            this.$store.state.loading = "close";
 
-          // close the verify delete parent form
-          this.$store.commit("OpenOrCloseDeleteFoodForm");
+            // close the verify delete parent form
+            this.$store.commit("OpenOrCloseDeleteFoodForm");
 
-          // to set the reqeust's error message to error message var in store
-          this.$store.state.error_message = error.response.data.message;
+            // to set the reqeust's error message to error message var in store
+            this.$store.state.error_message = error.response.data.message;
 
-          // to open the error form
-          this.$store.state.error_form_status = "open";
-        });
+            // to open the error form
+            this.$store.state.error_form_status = "open";
+          });
+      } catch (error) {
+        // to stop the loading animation
+        this.$store.state.loading = "close";
+
+        // close the verify delete parent form
+        this.$store.commit("OpenOrCloseDeleteFoodForm");
+
+        // to set the reqeust's error message to error message var in store
+        this.$store.state.error_message = error.response.data.message;
+
+        // to open the error form
+        this.$store.state.error_form_status = "open";
+      }
     },
   },
 };

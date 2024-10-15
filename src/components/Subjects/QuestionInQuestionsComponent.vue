@@ -75,8 +75,11 @@
     <div
       class="buttons"
       v-if="
-        this.$store.state.user &&
-        this.$store.state.user.user.subject == this.subject_type
+        (this.$store.state.user &&
+          this.$store.state.user.user_type == 'super') ||
+        this.$store.state.user.user_type == 'admin' ||
+        (this.$store.state.user.user_type == 'teacher' &&
+          this.$store.state.user.user.subject == this.subject_type)
       "
     >
       <!-- update -->

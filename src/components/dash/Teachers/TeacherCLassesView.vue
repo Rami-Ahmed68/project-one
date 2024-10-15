@@ -13,7 +13,7 @@
       </h3>
     </div>
 
-    <div class="cards-section">
+    <div class="classes-cards-section">
       <ClassesPageClassComponentDash
         v-for="(class_data, index) in this.$store.state.my_classes"
         :key="index"
@@ -153,12 +153,12 @@ export default {
     }
   }
 
-  .cards-section {
+  .classes-cards-section {
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
   }
 }
@@ -207,7 +207,7 @@ export default {
     }
   }
 
-  .cards-section {
+  .classes-cards-section {
     width: 100%;
     height: auto;
     display: flex;
@@ -216,7 +216,7 @@ export default {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
   }
 }

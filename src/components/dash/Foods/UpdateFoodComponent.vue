@@ -199,11 +199,17 @@ export default {
           // to stop the loading
           this.$store.state.loading = "close";
 
+          // emptying the food_data_for_update
+          this.$store.state.food_data_for_update = [];
+
+          // emptying the new_food_images array
+          this.$store.state.new_food_images = [];
+
+          // emptying the food_images_for_delete
+          this.$store.state.food_images_for_delete = [];
+
           // update the active component in store
           this.$store.state.active_component_in_dash = "foods";
-
-          // emptying the images form delete array in store
-          this.$store.state.food_images_for_delete = [];
         })
         .catch((error) => {
           // to stop the loading

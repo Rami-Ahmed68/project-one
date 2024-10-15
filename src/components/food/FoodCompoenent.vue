@@ -5,7 +5,7 @@
   >
     <!-- cover  -->
     <img
-      v-if="this.food_data.images"
+      v-if="this.food_data.images && this.food_data.images.length > 0"
       :src="this.food_data.images[0]"
       alt="cover"
     />

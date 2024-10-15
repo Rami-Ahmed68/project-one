@@ -190,12 +190,14 @@
       <!-- level  -->
 
       <!-- class_level  -->
-      <label for="class_level"
-      v-if="
+      <label
+        for="class_level"
+        v-if="
           (this.$store.state.user &&
             this.$store.state.user.user_type == 'super') ||
           this.$store.state.user.user_type == 'admin'
-        ">
+        "
+      >
         {{
           this.$store.state.language == "English"
             ? this.$store.state.English.update_question.class_level
@@ -203,12 +205,16 @@
         }}
       </label>
 
-      <select name="" id="class_level" v-model="this.class_level"
-      v-if="
+      <select
+        name=""
+        id="class_level"
+        v-model="this.class_level"
+        v-if="
           (this.$store.state.user &&
             this.$store.state.user.user_type == 'super') ||
           this.$store.state.user.user_type == 'admin'
-        ">
+        "
+      >
         <option
           v-for="(class_level, index) in this.$store.state.Classes_level_list"
           :key="index"
@@ -323,7 +329,6 @@ export default {
     setTimeout(() => {
       this.status = "open";
     }, 500);
-    console.log(this.$store.state.question_subject_type_for_update);
     //  call to the handleFileChange method on select any image
     this.$refs.images.addEventListener("change", this.handleFileChange);
   },
@@ -348,11 +353,11 @@ export default {
           this.APIS = this.$store.state.APIs.subjects_questions.french;
           break;
 
-        case "islam":
+        case "Islam":
           this.APIS = this.$store.state.APIs.subjects_questions.islam;
           break;
 
-        case "history":
+        case "History":
           this.APIS = this.$store.state.APIs.subjects_questions.history;
           break;
 
@@ -609,7 +614,6 @@ export default {
     // to set the new selectedimages
     handleFileChange(event) {
       if (event.target.files.length <= 5) {
-        console.log(this.images);
         // emptying the images array to delete all last paths
         this.images = [];
 
@@ -631,8 +635,6 @@ export default {
 
     // to reade the selected images
     async readerFiles() {
-      console.log(this.images);
-
       // looping to read all selecetd images
       for (const image of this.$store.state.new_question_images) {
         const reader = new FileReader();
@@ -648,7 +650,6 @@ export default {
         // add the promise results to images array
         this.images.push(await promise);
       }
-      console.log(this.images);
     },
   },
 };

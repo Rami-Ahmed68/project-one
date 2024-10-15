@@ -17,7 +17,7 @@
     <!-- header  -->
 
     <!-- foods section  -->
-    <div class="cards-section">
+    <div class="foods-cards-section">
       <FoodCompoenentInDash
         v-for="(food_data, index) in this.$store.state.foods"
         :key="index"
@@ -192,13 +192,13 @@ export default {
     }
   }
 
-  .cards-section {
+  .foods-cards-section {
     width: 100%;
     height: auto;
     margin: 20px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
   }
 }
@@ -247,7 +247,7 @@ export default {
     }
   }
 
-  .cards-section {
+  .foods-cards-section {
     width: 100%;
     height: auto;
     margin: 20px 0px;
@@ -304,7 +304,7 @@ export default {
     }
   }
 
-  .cards-section {
+  .foods-cards-section {
     width: 100%;
     height: auto;
     margin: 20px 0px;
@@ -359,7 +359,7 @@ export default {
     }
   }
 
-  .cards-section {
+  .foods-cards-section {
     width: 100%;
     height: auto;
     margin: 20px 0px;

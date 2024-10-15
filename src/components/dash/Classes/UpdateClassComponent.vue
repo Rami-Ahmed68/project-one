@@ -117,7 +117,16 @@
         }}</label
       >
 
-      <select name="" id="class_level" v-model="this.class_level">
+      <select
+        name=""
+        id="class_level"
+        v-model="this.class_level"
+        v-if="
+          (this.$store.state.user &&
+            this.$store.state.user.user_type == 'super') ||
+          this.$store.state.user.user_type == 'admin'
+        "
+      >
         <option
           v-for="(class_level, index) in this.$store.state.Classes_level_list"
           :key="index"

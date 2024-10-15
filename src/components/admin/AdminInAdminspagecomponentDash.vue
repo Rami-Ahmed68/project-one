@@ -49,7 +49,10 @@
       <!-- admin joind at  -->
     </div>
 
-    <div class="buttons" v-if="this.Dash && !this.admin_data.is_supper_admin">
+    <div
+      class="buttons"
+      v-if="this.Dash && this.$store.state.user.user_type == 'super'"
+    >
       <!-- admins buttons -->
       <button @click="GoToUpdateAdmi">
         {{
@@ -118,7 +121,7 @@ export default {
   margin: 5px 1%;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-content: center;
   background-color: $card-darck;
   transition-duration: 0.5s;
@@ -230,7 +233,7 @@ export default {
   margin: 5px 1%;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-content: center;
   background-color: $card-darck;
   transition-duration: 0.5s;

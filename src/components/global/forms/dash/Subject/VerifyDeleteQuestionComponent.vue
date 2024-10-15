@@ -67,11 +67,11 @@ export default {
           this.APIS = this.$store.state.APIs.subjects_questions.french;
           break;
 
-        case "islam":
+        case "Islam":
           this.APIS = this.$store.state.APIs.subjects_questions.islam;
           break;
 
-        case "history":
+        case "History":
           this.APIS = this.$store.state.APIs.subjects_questions.history;
           break;
 
@@ -146,7 +146,6 @@ export default {
           question_id: this.$store.state.question_id_for_delete,
         };
       }
-      console.log(this.api);
       await axios
         .delete(this.api, { data, headers })
         .then(() => {

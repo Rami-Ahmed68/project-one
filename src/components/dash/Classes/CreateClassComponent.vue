@@ -65,13 +65,28 @@
       <!-- note  -->
 
       <!-- subject  -->
-      <label for="subject">{{
-        this.$store.state.language == "English"
-          ? this.$store.state.English.create_class.subject
-          : this.$store.state.Arabic.create_class.subject
-      }}</label>
+      <label
+        for="subject"
+        v-if="
+          this.$store.state.user &&
+          this.$store.state.user.user_type != 'teacher'
+        "
+        >{{
+          this.$store.state.language == "English"
+            ? this.$store.state.English.create_class.subject
+            : this.$store.state.Arabic.create_class.subject
+        }}</label
+      >
 
-      <select name="" id="subject" v-model="this.subject">
+      <select
+        name=""
+        id="subject"
+        v-model="this.subject"
+        v-if="
+          this.$store.state.user &&
+          this.$store.state.user.user_type != 'teacher'
+        "
+      >
         <option
           v-for="(subject, index) in this.$store.state.subjects_list"
           :key="index"
@@ -87,13 +102,28 @@
       <!-- subject  -->
 
       <!-- class level  -->
-      <label for="class_level">{{
-        this.$store.state.language == "English"
-          ? this.$store.state.English.create_class.class_level
-          : this.$store.state.Arabic.create_class.class_level
-      }}</label>
+      <label
+        for="class_level"
+        v-if="
+          this.$store.state.user &&
+          this.$store.state.user.user_type != 'teacher'
+        "
+        >{{
+          this.$store.state.language == "English"
+            ? this.$store.state.English.create_class.class_level
+            : this.$store.state.Arabic.create_class.class_level
+        }}</label
+      >
 
-      <select name="" id="class_level" v-model="this.class_level">
+      <select
+        name=""
+        id="class_level"
+        v-model="this.class_level"
+        v-if="
+          this.$store.state.user &&
+          this.$store.state.user.user_type != 'teacher'
+        "
+      >
         <option
           v-for="(class_level, index) in this.$store.state.Classes_level_list"
           :key="index"
@@ -214,7 +244,10 @@ export default {
       // note
       note: "",
       // class level
-      class_level: "First_grade",
+      class_level:
+        this.$store.state.user && this.$store.state.user.user_type == "teacher"
+          ? this.$store.state.user.user.class_level
+          : "First_grade",
       // subject
       subject: "Math",
       // teacher
@@ -246,6 +279,9 @@ export default {
     // check if the user is teacher add his data to choosed_teacher in store
     if (this.$store.state.user.user_type == "teacher") {
       this.$store.state.choosed_teacher = this.$store.state.user.user;
+
+      // update the class's subject
+      this.subject = this.$store.state.user.user.subject;
     }
 
     // to open the page smooth

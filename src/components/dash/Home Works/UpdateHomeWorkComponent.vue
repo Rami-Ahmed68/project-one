@@ -264,8 +264,7 @@ export default {
 
       await axios
         .put(this.api, this.formData, { headers })
-        .then((response) => {
-          console.log(response);
+        .then(() => {
           // to stop the loading
           this.$store.state.loading = "close";
 

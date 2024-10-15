@@ -132,13 +132,7 @@
               : this.$store.state.Arabic.home_work_page.created_by
           }}
         </h4>
-        <router-link
-          :to="
-            this.$store.state.home_work.created_by_type == 'admin'
-              ? `/admin/${this.$store.state.home_work.created_by._id}`
-              : `/teacher/${this.$store.state.home_work.created_by._id}`
-          "
-        >
+        <div @click="GetAuthor">
           <img
             v-if="this.$store.state.home_work.created_by"
             :src="this.$store.state.home_work.created_by.avatar"
@@ -148,7 +142,7 @@
           <h3 v-if="this.$store.state.home_work.created_by">
             {{ this.$store.state.home_work.created_by.name }}
           </h3>
-        </router-link>
+        </div>
       </div>
       <!-- author -->
 
@@ -222,6 +216,7 @@ export default {
             `${this.$store.state.APIs.home_works.get_one}?home_work_id=${this.home_work_id}`
           )
           .then((response) => {
+            console.log(response);
             // open the page conatiner
             this.status = true;
 
@@ -250,6 +245,15 @@ export default {
 
         // to open the error form
         this.$store.state.error_form_status = "open";
+      }
+    },
+
+    //get author
+    GetAuthor() {
+      if (this.$store.state.home_work.created_by_type == "admin") {
+        window.location = `/admin/${this.$store.state.home_work.created_by._id}`;
+      } else {
+        window.location = `/teacher/${this.$store.state.home_work.created_by._id}`;
       }
     },
 
@@ -471,7 +475,7 @@ export default {
       }
 
       // link
-      a {
+      div {
         width: 100%;
         height: auto;
         display: flex;
@@ -483,6 +487,7 @@ export default {
         padding: 5px;
         margin: 5% 0%;
         transition-duration: 0.5s;
+        cursor: pointer;
 
         // author avatar
         img {
@@ -499,7 +504,7 @@ export default {
         }
       }
 
-      a:hover {
+      div:hover {
         background-color: $border-darck;
       }
     }
@@ -763,7 +768,8 @@ export default {
       }
 
       // link
-      a {
+      div {
+        cursor: pointer;
         width: 100%;
         height: auto;
         display: flex;
@@ -791,7 +797,7 @@ export default {
         }
       }
 
-      a:hover {
+      div:hover {
         background-color: $border-darck;
       }
     }
@@ -1056,7 +1062,8 @@ export default {
       }
 
       // link
-      a {
+      div {
+        cursor: pointer;
         width: 100%;
         height: auto;
         display: flex;
@@ -1084,7 +1091,7 @@ export default {
         }
       }
 
-      a:hover {
+      div:hover {
         background-color: $border-darck;
       }
     }
@@ -1316,7 +1323,8 @@ export default {
       }
 
       // link
-      a {
+      div {
+        cursor: pointer;
         width: 100%;
         height: auto;
         display: flex;
@@ -1344,7 +1352,7 @@ export default {
         }
       }
 
-      a:hover {
+      div:hover {
         background-color: $border-light;
       }
     }
