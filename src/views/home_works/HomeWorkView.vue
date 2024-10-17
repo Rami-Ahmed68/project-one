@@ -216,7 +216,6 @@ export default {
             `${this.$store.state.APIs.home_works.get_one}?home_work_id=${this.home_work_id}`
           )
           .then((response) => {
-            console.log(response);
             // open the page conatiner
             this.status = true;
 

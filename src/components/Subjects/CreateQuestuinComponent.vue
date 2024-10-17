@@ -514,7 +514,6 @@ export default {
           this.images = [];
         })
         .catch((error) => {
-          console.log(error);
           // to stop the loading
           this.$store.state.loading = "close";
 
@@ -559,7 +558,6 @@ export default {
     // to set the new selectedimages
     handleFileChange(event) {
       if (event.target.files.length <= 5) {
-        console.log(this.images);
         // emptying the images array to delete all last paths
         this.images = [];
 
@@ -581,8 +579,6 @@ export default {
 
     // to reade the selected images
     async readerFiles() {
-      console.log(this.images);
-
       // looping to read all selecetd images
       for (const image of this.$store.state.new_question_images) {
         const reader = new FileReader();
@@ -598,7 +594,6 @@ export default {
         // add the promise results to images array
         this.images.push(await promise);
       }
-      console.log(this.images);
     },
   },
 };

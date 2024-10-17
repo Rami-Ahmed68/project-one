@@ -25,7 +25,13 @@
       </div>
       <!-- header  -->
 
-      <div class="container">
+      <div
+        class="container"
+        v-if="
+          this.$store.state.exam_questions &&
+          this.$store.state.exam_questions.length > 0
+        "
+      >
         <!-- sid bar -->
         <div :class="`sid-bar-${this.sid_bar_status}`">
           <icon :icon="this.icon" @click="openOrCloseSidBar" />
@@ -264,9 +270,6 @@ export default {
           // call to start time ending method
           this.TimeMethood();
 
-          // to open the cont
-          this.status = true;
-
           // to stop the loading animation
           this.$store.state.loading = "close";
 
@@ -275,6 +278,15 @@ export default {
 
           // set the first question data to active question
           this.active_question = this.$store.state.exam_questions[0];
+
+          // check if the questions length is more than 0
+          if (this.$store.state.exam_questions.length == 0) {
+            // send the user to the home page
+            window.location = "/";
+          }
+
+          // to open the cont
+          this.status = true;
 
           // call to calculate all exam's questions points
           this.CalculateTotalExamPoints();

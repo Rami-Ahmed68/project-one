@@ -98,10 +98,8 @@ export default {
 
             // to open the error from
             this.$store.state.error_form_status = "open";
-            console.log(error);
           });
       } catch (error) {
-        console.log(`error is : ${error}`);
         // to set the error message to error message var in store
         this.$store.state.error_message = error.response.data.message;
 
