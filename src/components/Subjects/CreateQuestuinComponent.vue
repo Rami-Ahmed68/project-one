@@ -482,10 +482,12 @@ export default {
       }
 
       // add the options to form data
-      this.formData.append(
-        "options",
-        JSON.stringify(this.$store.state.question_options)
-      );
+      if (this.$store.state.question_options.length > 0) {
+        this.formData.append(
+          "options",
+          JSON.stringify(this.$store.state.question_options)
+        );
+      }
 
       // add the new images to form data
       if (this.$store.state.new_question_images.length > 0) {
