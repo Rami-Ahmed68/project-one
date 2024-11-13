@@ -18,8 +18,8 @@
   >
     {{
       this.$store.state.language == "Arabic"
-        ? this.$store.state.Arabic.plan_page.buttons.copy
-        : this.$store.state.English.plan_page.buttons.remove
+        ? this.$store.state.Arabic.plan_page.buttons.remove
+        : this.$store.state.English.plan_page.buttons.copy
     }}
   </button>
 </template>
