@@ -7,7 +7,7 @@
     {{
       this.$store.state.language == "English"
         ? this.$store.state.English.plan_page.buttons.copy
-        : this.$store.state.Arabic.plan_page.buttons.remove
+        : this.$store.state.Arabic.plan_page.buttons.copy
     }}
   </button>
 
@@ -18,7 +18,7 @@
   >
     {{
       this.$store.state.language == "Arabic"
-        ? this.$store.state.Arabic.plan_page.buttons.copy
+        ? this.$store.state.Arabic.plan_page.buttons.remove
         : this.$store.state.English.plan_page.buttons.remove
     }}
   </button>
@@ -85,7 +85,6 @@ export default {
           { headers }
         )
         .then((response) => {
-          console.log(response);
           // check if the user's my_plans array is has plan id
           if (!this.$store.state.user.user.my_plans.includes(this.plan_id)) {
             // add the plan id to user plans array
