@@ -418,11 +418,10 @@ export default {
       select {
         width: 90%;
         height: 40px;
-        padding: 5px 0px;
+        padding: 5px 10px;
         margin: 5px 5%;
         border: none;
         outline: none;
-        padding-left: 10px;
         border-radius: 5px;
       }
 
@@ -577,11 +576,10 @@ export default {
       select {
         width: 90%;
         height: 40px;
-        padding: 5px 0px;
+        padding: 5px 10px;
         margin: 5px 5%;
         border: none;
         outline: none;
-        padding-left: 10px;
         border-radius: 5px;
       }
 

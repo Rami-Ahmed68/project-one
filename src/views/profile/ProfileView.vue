@@ -1088,7 +1088,7 @@ export default {
 
       .default_message {
         width: 100%;
-        margin: 5px 0%;
+        margin: 5px 5%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -1367,7 +1367,7 @@ export default {
 
       .default_message {
         width: 100%;
-        margin: 5px 0%;
+        margin: 5px 5%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -1639,7 +1639,7 @@ export default {
 
       .default_message {
         width: 100%;
-        margin: 5px 0%;
+        margin: 5px 5%;
         height: auto;
         display: flex;
         justify-content: center;
