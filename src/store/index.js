@@ -9,7 +9,7 @@ export default createStore({
     language_list_state: "close",
     theme: window.localStorage.getItem("theme") || "orange",
     developer : {
-      url: "https://rami-web.onrender.com",
+      url: "https://rami-web-04e9.onrender.com/",
       English: "Developer 👨‍💻",
       Arabic: "👨‍💻 المطور",
     },
